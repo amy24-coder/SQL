@@ -61,4 +61,12 @@ WHERE location LIKE '%NY%'
 AND length(orderid) = 6 
 AND orderid <> 'Order ID'
 GROUP BY location
-HAVING count(orderID)>=3
+HAVING count(orderID)>=3;
+
+--How many of each type of headphone were sold in February?
+SELECT product, sum(quantity)
+FROM BIT_DB.FebSales
+WHERE product like '%Headphones%'
+AND length(orderid) = 6 
+AND orderid <> 'Order ID'
+Group by product;
