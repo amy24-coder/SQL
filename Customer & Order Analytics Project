@@ -61,4 +61,4 @@ WHERE location LIKE '%NY%'
 AND length(orderid) = 6 
 AND orderid <> 'Order ID'
 GROUP BY location
-HAVING count(orderID)>2
+HAVING count(orderID)>=3
